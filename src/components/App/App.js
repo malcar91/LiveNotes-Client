@@ -9,6 +9,14 @@ import SignIn from '../SignIn/SignIn'
 import SignOut from '../SignOut/SignOut'
 import ChangePassword from '../ChangePassword/ChangePassword'
 
+// import Notebook from '../notebook/notebook'
+import NotebookCreate from '../notebook/notebookCreate'
+import NotebookIndex from '../notebook/notebookIndex'
+import NotebookEdit from '../notebook/notebookEdit'
+// import ListCreate from '../list/listCreate'
+// import NotebookList from '../notebook/notebookList'
+// import Notebooks from '../notebook/notebookMain'
+
 class App extends Component {
   constructor () {
     super()
@@ -54,10 +62,26 @@ class App extends Component {
           <AuthenticatedRoute user={user} path='/change-password' render={() => (
             <ChangePassword msgAlert={this.msgAlert} user={user} />
           )} />
+          <AuthenticatedRoute user={user} exact path='/notebooks' render={() => (
+            <div>
+              <NotebookCreate msgAlert={this.msgAlert} user={user} />
+              <br />
+              <NotebookIndex user={user} />
+            </div>
+          )} />
+          <AuthenticatedRoute user={user} exact path='/edit' render={(noteProp) => (
+            <NotebookEdit user={user} noteProp={noteProp} />
+          )} />
         </main>
       </Fragment>
     )
   }
 }
+// <AuthenticatedRoute user={user} path='/notebooks' render={() => (
+//   <Notebook user={user}/>
+// )} />
+// <Notebook user={user} />
+
+// <Route exact path='notebooks' component={NotebookIndex} />
 
 export default App

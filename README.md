@@ -3,10 +3,10 @@
 This app is a personal notebook with where you can create or delete new notebooks for different subjects.
 
 ## Important Links
--[Client Repo]https://github.com/malcar91/LiveNotes-Client
--[Client Deployed]https://malcar91.github.io/LiveNotes-Client/
--[API Repo]https://github.com/malcar91/LiveNotes-Server
--[API Deployed]
+- [Client Repo] https://github.com/malcar91/LiveNotes-Client
+- [Client Deployed] https://malcar91.github.io/LiveNotes-Client/
+- [API Repo] https://github.com/malcar91/LiveNotes-Server
+- [API Deployed]
 
 ## Planning Story
 

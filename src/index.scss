@@ -1,1 +1,17 @@
 @import '~bootstrap/scss/bootstrap';
+
+body {
+  min-height: 100vh;
+  background: url("images/notebook-background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+// img {
+//   opacity: 0.5;
+// }
+
+h2, h3 {
+  background: grey;
+}

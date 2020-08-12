@@ -64,7 +64,7 @@ class NotebookIndex extends Component {
     return (
       <div>
         <h2>Your Notebooks</h2>
-        <Table striped bordered hover>
+        <Table striped bordered hover variant="dark">
           <thead>
             <tr>
               <th>ID</th>

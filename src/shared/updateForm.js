@@ -32,7 +32,7 @@ const UpdateForm = ({ notebook, handleSubmit, handleInputChange, cancelPath }) =
       onChange={handleInputChange}
     />
     <br />
-    <ReactQuill></ReactQuill>
+    <ReactQuill theme="snow" />
 
     <br />
     <Button type="submit">Update</Button>

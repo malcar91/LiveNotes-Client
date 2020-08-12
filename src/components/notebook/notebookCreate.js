@@ -75,6 +75,7 @@ class NotebookCreate extends Component {
     // }
     return (
       <Layout>
+        <h2>Create Notebook</h2>
         <NotebookForm
           notebook={notebook}
           handleInputChange={handleInputChange}

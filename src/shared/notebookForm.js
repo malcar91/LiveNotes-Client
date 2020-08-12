@@ -23,9 +23,9 @@ const NotebookForm = ({ notebook, handleSubmit, handleInputChange, cancelPath })
       onChange={handleInputChange}
     />
 
-    <Form.Label>Body</Form.Label>
+    <Form.Label>Description</Form.Label>
     <Form.Control
-      placeholder="body"
+      placeholder="Description"
       value={notebook.body}
       name="body"
       onChange={handleInputChange}

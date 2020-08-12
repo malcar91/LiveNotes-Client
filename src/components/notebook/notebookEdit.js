@@ -14,33 +14,40 @@ class NotebookEdit extends Component {
     super(props)
 
     this.state = {
-      notebook: {
-        title: '',
-        date: '',
-        body: ''
-      },
-      updated: false
+      notebook: this.props.noteProp.location.notebook
     }
   }
 
+  componentDidMount () {
+    console.log(this.props, 'componentDidMount axios')
+    axios(`${apiUrl}/notebooks/`)
+      .then(res => this.setState({ notebook: res.data.notebook }))
+      .catch(console.error)
+  }
+
   // componentDidMount () {
-  //   console.log(this.props, 'componentDidMount axios')
   //   axios({
-  //     url: `${apiUrl}/notebooks/${this.props.noteProp.location.notebook.id}`,
-  //     method: 'GET',
+  //     method: 'PATCH',
+  //     url: apiUrl + '/notebooks/' + `${this.props.noteProp.location.notebook.id}`,
   //     headers: {
+  //       'Content-Type': 'application/json',
   //       'Authorization': `Bearer ${this.props.user.token}`
+  //     },
+  //     data: {
+  //       notebook: this.state.notebook
   //     }
   //   })
-  //     .then(res => this.setState({ notebook: res.data.notebook }))
-  //     .catch(console.error)
   // }
 
   handleInputChange = event => {
     const updatedField = { [event.target.name]: event.target.value }
-    const editedNotebook = Object.assign(this.state.notebook, updatedField)
+    const editedNotebook = Object.assign({}, this.state.notebook, updatedField)
     this.setState({ notebook: editedNotebook })
   }
+
+  handleInputChange = event => this.setState({
+    [event.target.name]: event.target.value
+  })
 
   handleSubmit = event => {
     event.preventDefault()
@@ -69,6 +76,7 @@ class NotebookEdit extends Component {
 
     return (
       <Layout>
+        <h2>Update Notes</h2>
         <UpdateForm
           notebook={notebook}
           handleInputChange={handleInputChange}

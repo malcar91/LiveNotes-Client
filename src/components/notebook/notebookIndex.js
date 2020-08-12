@@ -63,6 +63,7 @@ class NotebookIndex extends Component {
     // const { title, date, body } = this.state
     return (
       <div>
+        <h2>Your Notebooks</h2>
         <Table striped bordered hover>
           <thead>
             <tr>
@@ -78,7 +79,7 @@ class NotebookIndex extends Component {
             {
               this.state.notebooks.map(notebook => {
                 return (
-                  <tr key='notebookmap'>
+                  <tr key={notebook.id}>
                     <td>{notebook._id}</td>
                     <td>{notebook.title}</td>
                     <td>{notebook.date}</td>
@@ -89,7 +90,11 @@ class NotebookIndex extends Component {
                       <Button onClick={this.updateHandler} type='button'>Update</Button>
                       {this.state.update && <Redirect to={{
                         pathname: '/edit',
-                        notebook: this.state.notebook
+                        notebook: {
+                          title: notebook.title,
+                          date: notebook.date,
+                          body: notebook.body
+                        }
                       }} /> }
                     </td>
                   </tr>

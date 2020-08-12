@@ -3,9 +3,9 @@
 This app is a personal notebook with where you can create or delete new notebooks for different subjects.
 
 ## Important Links
-![Client Repo]
-![Client Deployed]
-![API Repo]
+![Client Repo]https://github.com/malcar91/LiveNotes-Client
+![Client Deployed]https://malcar91.github.io/LiveNotes-Client/
+![API Repo]https://github.com/malcar91/LiveNotes-Server
 ![API Deployed]
 
 ## Planning Story
@@ -29,8 +29,9 @@ I started with designing the wireframes to give me a good layout of how I want t
 ## Wireframe
 <img src='public/LiveNoteWireFrame.jpg'>
 
-## ERD
-<img src='public/LiveNoteERD.jpg'>
-
 ## App Screenshpt
-![tbd]
+<img src='public/AppScreenShot.png'>
+
+## Unsolved Problems
+
+- the update notebook feature is no longer working, I was able to redirect the update button in the table to a different page and succesfully update the notebook and now it is not working.

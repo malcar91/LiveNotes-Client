@@ -6,7 +6,7 @@ This app is a personal notebook with where you can create or delete new notebook
 - [Client Repo] https://github.com/malcar91/LiveNotes-Client
 - [Client Deployed] https://malcar91.github.io/LiveNotes-Client/
 - [API Repo] https://github.com/malcar91/LiveNotes-Server
-- [API Deployed]
+- [API Deployed] https://git.heroku.com/whispering-ravine-93747.git
 
 ## Planning Story
 

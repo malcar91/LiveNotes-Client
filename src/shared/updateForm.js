@@ -3,41 +3,35 @@ import React from 'react'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 
-const NotebookForm = ({ notebook, handleSubmit, handleChange }) => (
+const UpdateForm = ({ notebook, handleSubmit, handleInputChange, cancelPath }) => (
   <Form onSubmit={handleSubmit}>
-    <Form.Group>
-      <Form.Label>Title</Form.Label>
-      <Form.Control required
-        onChange={handleChange}
-        value={notebook.title}
-        type='text'
-        name='title'
-        placeholder="Notebook Title"/>
-    </Form.Group>
 
-    <Form.Group>
-      <Form.Label>Date</Form.Label>
-      <Form.Control required
-        onChange={handleChange}
-        value={notebook.date}
-        type='date'
-        name="date"
-        placeholder="Today's Date"/>
-    </Form.Group>
+    <Form.Label>Title</Form.Label>
+    <Form.Control
+      placeholder="Title"
+      type="text"
+      name="title"
+      onChange={handleInputChange}
+    />
 
-    <Form.Group>
-      <Form.Label>Body</Form.Label>
-      <Form.Control required
-        onChange={handleChange}
-        value= {notebook.body}
-        name="body"
-        as="textarea"
-        placeholder="Enter Your Notes"/>
-    </Form.Group>
-    <Button type="submit">Update Book</Button >
+    <Form.Label>Date Created</Form.Label>
+    <Form.Control
+      placeholder="DD-MM-YYYY"
+      type="date"
+      name="date"
+      onChange={handleInputChange}
+    />
+
+    <Form.Label>Body</Form.Label>
+    <Form.Control
+      placeholder="body"
+      type="text"
+      name="body"
+      onChange={handleInputChange}
+    />
+    <br />
+    <Button type="submit">Update</Button>
   </Form>
 )
-// <Link to={cancelPath}>
-//   <Button>Cancel</Button>
-// </Link>
-export default NotebookForm
+
+export default UpdateForm

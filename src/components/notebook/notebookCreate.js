@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Redirect } from 'react-router-dom'
+// import { Redirect } from 'react-router-dom'
 // import { withRouter } from 'react-router-dom'
 import axios from 'axios'
 import apiUrl from '../../apiConfig.js'
@@ -7,11 +7,6 @@ import messages from '../AutoDismissAlert/messages'
 
 import NotebookForm from '../../shared/notebookForm'
 import Layout from '../../shared/layout'
-
-// import NotebookIndex from './notebookIndex'
-// import NotebookShow from './notebookShow'
-
-// import Form from 'react-bootstrap/Form'
 // import Button from 'react-bootstrap/Button'
 
 class NotebookCreate extends Component {
@@ -73,11 +68,11 @@ class NotebookCreate extends Component {
 
   render () {
     const { handleInputChange, handleSubmit } = this
-    const { createdNotebookId, notebook } = this.state
+    const { notebook } = this.state
     // const { title, date, body } = this.state
-    if (createdNotebookId) {
-      return <Redirect to={`/notebooks/${createdNotebookId}`} />
-    }
+    // if (createdNotebookId) {
+    //   return <Redirect to={`/notebooks/${createdNotebookId}`} />
+    // }
     return (
       <Layout>
         <NotebookForm

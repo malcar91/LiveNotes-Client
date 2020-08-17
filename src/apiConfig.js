@@ -11,5 +11,3 @@ if (window.location.hostname === 'localhost') {
 }
 
 export default apiUrl
-// https://malcar91.github.io/LiveNotes-Client/
-//

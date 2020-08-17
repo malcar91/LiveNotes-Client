@@ -1,6 +1,6 @@
 let apiUrl
 const apiUrls = {
-  production: 'https://malcar91.github.io/LiveNotes-Client/',
+  production: 'https://whispering-ravine-93747.herokuapp.com',
   development: 'http://localhost:4741'
 }
 
@@ -12,4 +12,4 @@ if (window.location.hostname === 'localhost') {
 
 export default apiUrl
 // https://malcar91.github.io/LiveNotes-Client/
-// https://whispering-ravine-93747.herokuapp.com/
+//
